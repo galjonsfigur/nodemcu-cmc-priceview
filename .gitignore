@@ -2,4 +2,5 @@
 /.project
 /luac.out
 /.cproject
+.settings/
 *.lc
