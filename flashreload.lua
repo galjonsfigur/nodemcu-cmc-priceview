@@ -1,1 +1,0 @@
-node.flashreload("luac.out")

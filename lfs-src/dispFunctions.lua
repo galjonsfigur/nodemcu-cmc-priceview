@@ -44,6 +44,7 @@ local function animateLogo(display, logo)
    display:sendBuffer()
    if logoY >= 0 then timer:unregister() end
    logoY = logoY + 16
+   collectgarbage() -- To prevent E:M messages
  end) 
 end
 

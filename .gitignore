@@ -1,6 +1,7 @@
 /.buildpath
 /.project
 /luac.out
+/luac.cross.out
 /.cproject
 .settings/
 *.lc

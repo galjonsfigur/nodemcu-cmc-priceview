@@ -38,13 +38,14 @@ build-lfs-image:
 
 flash-lfs-image:
 	@echo "Installing LFS image"
-	$(NODEMCU_UPLOADER) --port $(NODEMCU_PORT) upload luac.out
+	$(NODEMCU_UPLOADER) --port $(NODEMCU_PORT) upload luac.cross.out
 # Workaround to https://github.com/kmpm/nodemcu-uploader/issues/76
 	$(NODEMCU_UPLOADER) --port $(NODEMCU_PORT) upload flashreload.lua
 	$(NODEMCU_UPLOADER) --port $(NODEMCU_PORT) file do flashreload.lua
 
 clean:
-	rm luac.out $(LC_FILES)
+	rm luac.cross.out $(LC_FILES)
+	
 lfs: build-lfs-image flash-lfs-image
 all: upload lfs run
 all-release: upload-release lfs run-release 
